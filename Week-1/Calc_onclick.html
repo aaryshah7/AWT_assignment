@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h2>Arithmetic Operations</h2>
+    Number 1 : <input type="text" id="input1" placeholder="Num 1"><span id="errors"></span><br><br>
+    Number 2 : <input type="text" id="input2" placeholder="Num 2"><br><br>
+    Answer : <label id="ans"></label><br><br>
+
+    <input type="button" id="btnsum" value="sum" onclick="sum(); error();">
+    <input type="button" id="btnsub" value="sub" onclick="sub(); error();">
+    <input type="button" id="btnmul" value="mul" onclick="mul(); error();">
+    <input type="button" id="btndiv" value="div" onclick="div(); error();">
+    
+    <script>
+        function sum(){
+            no1 = parseInt(document.getElementById('input1').value);
+            no2 = parseInt(document.getElementById('input2').value);
+            ans = no1+no2;
+            document.getElementById('ans').innerHTML = ans;
+        }
+        function sub(){
+            no1 = parseInt(document.getElementById('input1').value);
+            no2 = parseInt(document.getElementById('input2').value);
+            ans = no1-no2;
+            document.getElementById('ans').innerHTML = ans;
+        }
+        function mul(){
+            no1 = parseInt(document.getElementById('input1').value);
+            no2 = parseInt(document.getElementById('input2').value);
+            ans = no1*no2;
+            document.getElementById('ans').innerHTML = ans;
+        }
+        function div(){
+            no1 = parseInt(document.getElementById('input1').value);
+            no2 = parseInt(document.getElementById('input2').value);
+            ans = no1/no2;
+            document.getElementById('ans').innerHTML = ans;
+        }
+        function error(){
+            no1 = parseInt(document.getElementById('input1').value);
+            no2 = parseInt(document.getElementById('input2').value);
+            if(isNaN(no1) || isNaN(no2)){
+                document.getElementById('errors').style.color = "red";
+                document.getElementById('errors').innerHTML = " *Please input number";
+            }
+        }
+    </script>
+</body>
+</html>

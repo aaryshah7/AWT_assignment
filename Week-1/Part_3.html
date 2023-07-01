@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Hello There !!!</h2>
+    <script>
+        const cspit={
+        departments:['CE','IT','CSE','EC','EE','CL','ME'],
+        year:2003,
+        location:"Changa",
+
+        getDepartment:function(){
+
+            console.log("Year of Establishment :" + this.year);
+            console.log("Location :" + this.location);
+            for(let i of this.departments)
+            {
+                console.log(i);
+            }
+        }
+    }
+
+    const CE=Object.create(cspit);
+    CE.TotalStudents=250;
+    CE.NoofFaculty=30;
+
+    CE.getCE=function(){
+        CE.getDepartment();
+        console.log("Total Students :" + this.TotalStudents);
+        console.log("No of Faculty :" + this.NoofFaculty);
+        for(let i in this.departments)
+        {
+            console.log(this.departments[i]);
+        }
+    }
+
+    CE.getCE(); 
+    </script>
+</body>
+</html>

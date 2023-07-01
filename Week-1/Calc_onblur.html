@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h2>Arithmetic Operations</h2>
+    Number 1 : <input type="text" id="input1" placeholder="Num 1" ><span id="errors"></span><br><br>
+    Number 2 : <input type="text" id="input2" placeholder="Num 2" onblur="calc();"><br><br>
+
+    <input type="text" id="btnsum" placeholder="sum" style="width: 60px;">
+    <input type="text" id="btnsub" placeholder="sub" style="width: 60px;"><br><br>
+    <input type="text" id="btnmul" placeholder="mul" style="width: 60px;">
+    <input type="text" id="btndiv" placeholder="div" style="width: 60px;">
+    
+    <script>
+        function sum(){
+            console.log("hello");
+            no1 = parseInt(document.getElementById('input1').value);
+            no2 = parseInt(document.getElementById('input2').value);
+            ans = no1+no2;
+            document.getElementById('btnsum').value = ans;
+
+
+            console.log("hello end");
+        }
+        function sub(){
+            no1 = parseInt(document.getElementById('input1').value);
+            no2 = parseInt(document.getElementById('input2').value);
+            ans = no1-no2;
+            document.getElementById('btnsub').value = ans;
+            console.log("hello end");
+        }
+        function mul(){
+            no1 = parseInt(document.getElementById('input1').value);
+            no2 = parseInt(document.getElementById('input2').value);
+            ans = no1*no2;
+            document.getElementById('btnmul').value = ans;
+        }
+        function div(){
+            no1 = parseInt(document.getElementById('input1').value);
+            no2 = parseInt(document.getElementById('input2').value);
+            ans = no1/no2;
+            document.getElementById('btndiv').value = ans;
+        }
+        function error(){
+            no1 = parseInt(document.getElementById('input1').value);
+            no2 = parseInt(document.getElementById('input2').value);
+            if(isNaN(no1) || isNaN(no2)){
+                document.getElementById('errors').style.color = "red";
+                document.getElementById('errors').innerHTML = " *Please input number";
+            }
+        }
+
+        function calc(){
+            sum();
+            sub();
+            mul();
+            div();
+            error();
+        }
+    </script>
+</body>
+</html>
