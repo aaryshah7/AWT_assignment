@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div class="wrapper">
+        <div class="container">
+            <div class="divison1">
+            </div>
+            <div class="division2">
+                <h1 class="header">SIGN UP</h1>
+                <form action="" class="formClass">
+                    <div class="innerClass">
+                        <div class="input_class">
+                            <label for="fullName">Full Name</label>
+                            <div class="line"></div>
+                            <input type="text" id="fullName" placeholder="Enter Fullname">
+                            <span data-errorName class="name">only name</span>
+                        </div>
+                        <div class="input_class">
+                            <label for="userName">Username</label>
+                            <div class="line"></div>
+                            <input type="text" id="userName" data-userName placeholder="Enter username">
+                            <span data-errorUsername class="name">Try using upper lower and number only</span>
+
+                        </div>
+                    </div>
+                
+                    <div class="innerClass">
+
+                        <div class="input_class">
+                            <label for="phone">Phone</label>
+                            <div class="line"></div>
+                            <input type="text" id="phone" data-phone placeholder="Enter your phone number">
+                            <span data-errorPhone class="name">10digit + number input only</span>
+                        
+                        </div>
+                        <div class="input_class">
+                            <label for="email">Email</label>
+                            <div class="line"></div>
+                            <input type="email" data-email id="email" placeholder="Enter your Email">
+                            <span data-errorEmail class="name">gamil or charusat id only</span>
+                        
+                        </div>
+                    </div>
+                    <div class="gender_and_state">
+                        <div class="input_class_gender">
+                            <div>
+                                <label for="gender" id="gender">Gender</label>
+                                <div class="line"></div>
+                            </div>
+                                <div class="genderClass">
+                                    <div>
+                                        <input type="radio" class="gender" id="male" value="male">
+                                        <label for="male">Male</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" class="gender" id="female" value="female">
+                                        <label for="female">Female</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" class="gender" id="Others" value="Others">
+                                        <label for="Others">Others</label>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="input_class">
+                            <label for="state" class="stateClass">State</label>
+                            <div class="line stateClass" ></div>
+                            <select name="state" class="stateClass" id="state" aria-placeholder="select state">
+                                <option value="Bihar">Bihar</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat" selected>Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Kerala">Kerala</option>
+                            </select>
+                        </div>
+    
+                    </div>
+                    <div class="innerClasses">
+
+                        <div class="input_class">
+                            <label for="Password">password</label>
+                            <div class="line"></div>
+
+                            <input type="password" id="Password" data-passwordInput placeholder="Enter password">
+                            <span class="name" data-errorPassword>*add upper lower and special character</span>
+                        </div>
+                        <div class="input_class">
+                            <label for="confirmpassword">confirme password</label>
+                            <div class="line"></div>
+
+                            <input type="password" id="confirmpassword" data-confirmedPassword placeholder="confirme your password">
+                            <span class="name" data-passwordNotSame>*password doesn't match</span>
+                        </div>
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <div class="input_class_agreement">
+                        <input type="checkbox" id="checked" required><label for="checked">are you agreed with our terms and conditions</label>
+                    </div>
+                    <div class="input_class">
+                        <input type="submit" id="submitBtn" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+     </div>
+
+    
+
+    <script src="Form.js"></script>
+</body>
+</html>
